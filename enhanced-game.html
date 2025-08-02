@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced Fighting Game</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      font-family: 'Arial', sans-serif;
+    }
+    
+    .game-container {
+      position: relative;
+      border: 3px solid #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    
+    #gameCanvas {
+      display: block;
+      background: #87CEEB;
+    }
+    
+    .info {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: rgba(0,0,0,0.7);
+      padding: 10px 20px;
+      border-radius: 5px;
+      z-index: 10;
+    }
+    
+    .health-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 300px;
+      margin-top: 5px;
+    }
+    
+    .player-health {
+      font-weight: bold;
+      font-size: 18px;
+    }
+    
+    .controls {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      font-size: 12px;
+      background: rgba(0,0,0,0.7);
+      padding: 8px 15px;
+      border-radius: 5px;
+      z-index: 10;
+    }
+    
+    .character-preview {
+      position: absolute;
+      top: 80px;
+      left: 20px;
+      right: 20px;
+      display: flex;
+      justify-content: space-between;
+      color: white;
+      font-size: 14px;
+      z-index: 10;
+    }
+    
+    .preview-box {
+      background: rgba(0,0,0,0.8);
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      min-width: 120px;
+    }
+    
+    .preview-box h3 {
+      margin-bottom: 5px;
+      color: #FFD700;
+    }
+    
+    .stats {
+      font-size: 11px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <div class="info">
+      <h2>Enhanced Fighting Game</h2>
+      <div class="health-container">
+        <div class="player-health" style="color: #FF6B6B;">P1: <span id="p1-health">100</span> HP</div>
+        <div style="color: #FFD700;">VS</div>
+        <div class="player-health" style="color: #4ECDC4;">P2: <span id="p2-health">100</span> HP</div>
+      </div>
+    </div>
+    
+    <canvas id="gameCanvas"></canvas>
+    
+    <div class="controls">
+      <div><strong>Character Selection:</strong> P1: A/D + Space | P2: ←/→ + Enter</div>
+      <div><strong>Game:</strong> P1: A/D/W/Space | P2: Arrows/Enter</div>
+    </div>
+  </div>
+  
+  <script src="sprite-fighter.js"></script>
+  <script src="enhanced-game.js"></script>
+</body>
+</html>

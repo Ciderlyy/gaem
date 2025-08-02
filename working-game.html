@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Working Fighting Game</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      font-family: 'Arial', sans-serif;
+    }
+    
+    .game-container {
+      position: relative;
+      border: 3px solid #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    
+    #gameCanvas {
+      display: block;
+      background: #87CEEB;
+    }
+    
+    .info {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: rgba(0,0,0,0.7);
+      padding: 10px 20px;
+      border-radius: 5px;
+      z-index: 10;
+    }
+    
+    .controls {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      font-size: 12px;
+      background: rgba(0,0,0,0.7);
+      padding: 8px 15px;
+      border-radius: 5px;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <div class="info">
+      <h2>Working Fighting Game</h2>
+      <p>Player 1: <span id="p1-health">100</span> HP | Player 2: <span id="p2-health">100</span> HP</p>
+    </div>
+    
+    <canvas id="gameCanvas"></canvas>
+    
+    <div class="controls">
+      <div><strong>Player 1:</strong> A/D = Move, W = Jump, Space = Attack</div>
+      <div><strong>Player 2:</strong> Arrow Keys = Move, Up = Jump, Enter = Attack</div>
+    </div>
+  </div>
+  
+  <script src="working-game.js"></script>
+</body>
+</html>

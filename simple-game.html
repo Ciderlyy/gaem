@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Fighting Game</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #222;
+    }
+    
+    #gameCanvas {
+      border: 2px solid white;
+      background: #87CEEB;
+    }
+    
+    .info {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    
+    .controls {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="info">
+    <h2>Simple Fighting Game</h2>
+    <p>Player 1: <span id="p1-health">100</span> HP | Player 2: <span id="p2-health">100</span> HP</p>
+  </div>
+  
+  <canvas id="gameCanvas"></canvas>
+  
+  <div class="controls">
+    <p><strong>Player 1:</strong> A/D = Move, W = Jump, Space = Attack</p>
+    <p><strong>Player 2:</strong> Arrow Keys = Move, Up = Jump, Enter = Attack</p>
+  </div>
+  
+  <script src="simple-game.js"></script>
+</body>
+</html>
